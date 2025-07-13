@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  background-color: #000;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 120px;
+  background-color: #000;
+  border-bottom: 1px solid #353535;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  animation: navFadeIn 1.2s 0.2s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+  gap: 10px;
+}
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links a,
+.nav-links .login-button,
+.nav-links .subscribe-button {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: linkFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.nav-links a:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.nav-links a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.nav-links a:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.nav-links a:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.nav-links a:nth-child(5) {
+  animation-delay: 0.7s;
+}
+.nav-links .login-button {
+  animation-delay: 0.8s;
+}
+.nav-links .subscribe-button {
+  animation-delay: 0.9s;
+}
+
+@keyframes linkFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 50px;
+  transition: color 0.2s;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.24px;
+  letter-spacing: -0.8px;
+}
+
+.nav-links a:first-child {
+  margin-left: 0;
+}
+
+.nav-links a:not(.login-button):not(.subscribe-button):hover {
+  color: #fff789;
+}
+
+.login-button {
+  border: 1px solid #353535;
+  font-family: "Inter", sans-serif;
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: #fff789;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.subscribe-button {
+  background-color: #fff789;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: #000;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 0 0 #ff0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+.subscribe-button i {
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+
+.subscribe-button:hover {
+  background: #fff700;
+  color: #000;
+  box-shadow: 0 2px 16px 0 #fff70044;
+}
+
+.subscribe-button:hover i {
+  transform: translateX(4px);
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links a {
+    font-size: 12px;
+    margin-left: 15px;
+  }
+  .login-button,
+  .subscribe-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-wrap: nowrap;
+  }
+  .nav-links {
+    justify-content: flex-end;
+  }
+  .nav-links a:not(.login-button):not(.subscribe-button) {
+    display: none;
+  }
+  .login-button,
+  .subscribe-button {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 15px;
+  }
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+  .login-button,
+  .subscribe-button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  .subscribe-button i {
+    display: none;
+  }
+}
