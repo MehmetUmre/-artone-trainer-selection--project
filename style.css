@@ -1,3 +1,4 @@
+/*--- [AR-16]-Navbar --- */
 body {
   margin: 0;
   background-color: #000;
@@ -193,3 +194,75 @@ body {
     display: none;
   }
 }
+/*--- [AR-16]-Navbar --- */
+/*--- [AR-2]-Hero title content  --- */
+
+.hero-container {
+  text-align: left;
+  margin-left: 120px;
+  padding-top: 50px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+}
+h1 {
+  font-size: 90px;
+  margin: 0;
+  color: #d4d4d4;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90.2px;
+  letter-spacing: -4px;
+}
+.yellow {
+  color: #fe0;
+  opacity: 0;
+  animation: yellowFadeIn 1.2s 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  font-family: "Inter", sans-serif;
+  font-size: 89px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90.2px;
+  letter-spacing: -4px;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes yellowFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 10vw;
+  }
+  .yellow {
+    font-size: 15vw;
+  }
+  .hero-container {
+    margin: 10px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 15vw;
+  }
+  .yellow {
+    font-size: 15vw;
+  }
+}
+/*--- [AR-2]-Hero title content  --- */
