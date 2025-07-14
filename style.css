@@ -937,3 +937,30 @@ h1 {
   }
 }
 /*--- [AR-7]- Pitch Card  --- */
+/*--- [AR-8]- Features Title  --- */
+.features-title-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 48px;
+  margin-top: 60px;
+}
+.features-headline {
+  font-weight: 700;
+  font-size: 48px;
+  text-align: left;
+  color: #e9e9e9;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 57.24px;
+  letter-spacing: -2.4px;
+}
+.features-headline .features-yellow {
+  color: #fe0;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57.24px;
+  letter-spacing: -2.4px;
+}
+/*--- [AR-8]- Features Title  --- */
